@@ -1,4 +1,4 @@
-import { getTourDates } from './database.js';
+import { getTourDates, getCities, getOpeners } from './database.js';
 /* 
   Responsbility:
 
@@ -16,3 +16,41 @@ import { getTourDates } from './database.js';
     </ol>
   </article>
 */
+
+export const TourDatesHTML = () => {
+  const tourDates = getTourDates();
+  const cities = getCities();
+  const openers = getOpeners();
+
+  let HTMLstring = `  <article class="events">
+    <header>Tour Details</header>
+
+    <ol>`
+
+  for (const tourDate of tourDates) {
+    let matchedCity = null;
+    for (const city of cities) {
+      if (tourDate.cityId === city.id) {
+        matchedCity = city;
+        break;
+      }
+    }
+
+    let matchedOpener = null;
+    for (const opener of openers) {
+      if (opener.id === tourDate.opener) {
+        matchedOpener = opener;
+        break;
+      }
+    }
+
+    HTMLstring += `<li class="event">${matchedCity.city}, ${matchedCity.country} on ${tourDate.date}:${tourDate.time} at ${tourDate.venue} with opening act ${matchedOpener.band}.</li>\n`
+  }
+
+
+
+  HTMLstring += ` </ol>
+      </article>`
+
+  return HTMLstring;
+}
