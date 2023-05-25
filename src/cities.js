@@ -17,3 +17,20 @@ import { getCities } from './database.js';
     </ol>
   </article>
 */
+
+export const CitiesHTML = () => {
+  const cities = getCities();
+  let HTMLstring = `  <article class="cities">
+    <header>Locations</header>
+
+    <ol>`
+
+  for (const city of cities) {
+    HTMLstring += `<li class="city"> ${city.city}, ${city.country}</li>\n`
+  }
+
+  HTMLstring += `  </ol>
+    </article>`
+
+  return HTMLstring;
+}
