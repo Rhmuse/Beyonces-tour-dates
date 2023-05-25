@@ -5,6 +5,11 @@
   to output the resulting HTML strings to the console panel.
 */
 
+import { BandsHTML } from './bands.js';
+import { CitiesHTML } from './cities.js';
+
+console.log(BandsHTML());
+console.log(CitiesHTML())
 
 
 
