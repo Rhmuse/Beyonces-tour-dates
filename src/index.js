@@ -26,11 +26,11 @@ console.log(TourDatesHTML());
 
 
 
-
+{/* <img id="beyonce" src="./src/imgs/image.png" /> */ }
 
 
 document.getElementById("app").innerHTML = `
-<img src
+
 <h1>Beyonce World Tour Dates</h1>
 <ol>
   <li>Generate an ordered list of opening bands as HTML</li>
