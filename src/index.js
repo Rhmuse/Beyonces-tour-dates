@@ -7,9 +7,11 @@
 
 import { BandsHTML } from './bands.js';
 import { CitiesHTML } from './cities.js';
+import { TourDatesHTML } from './tourDates.js';
 
 console.log(BandsHTML());
-console.log(CitiesHTML())
+console.log(CitiesHTML());
+console.log(TourDatesHTML());
 
 
 
