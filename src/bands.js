@@ -1,3 +1,5 @@
+import { getOpeners } from './database.js';
+
 /* 
   Responsbility:
 

@@ -91,3 +91,14 @@ const database = {
         },
     ]
 };
+
+// write getters for tourDates, cities, and openers
+export const getTourDates = () => {
+    return database.tourDates.map(tourDate => ({ ...tourDate }))
+}
+export const getCities = () => {
+    return database.cities.map(city => ({ ...city }))
+}
+export const getOpeners = () => {
+    return database.openers.map(opener => ({ ...opener }))
+}

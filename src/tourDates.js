@@ -1,3 +1,4 @@
+import { getTourDates } from './database.js';
 /* 
   Responsbility:
 
