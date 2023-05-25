@@ -17,3 +17,26 @@ import { getOpeners } from './database.js';
     </ol>
   </article>
 */
+
+// store opener in local variable
+// define and export function called BandsHTML
+// iterate through opener arr 
+// assign band names to li items
+// return the html string
+
+export const BandsHTML = () => {
+  const openers = getOpeners();
+  let HTMLstring = `<article class="acts">
+    <header>Opening Acts</header>
+
+    <ol>`
+
+  for (const opener of openers) {
+    HTMLstring += `<li class="act"> ${opener.band}</li>\n`
+  }
+
+  HTMLstring += `</ol>
+    </article>`
+
+  return HTMLstring;
+}
