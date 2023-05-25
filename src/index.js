@@ -30,6 +30,7 @@ console.log(TourDatesHTML());
 
 
 document.getElementById("app").innerHTML = `
+<img src
 <h1>Beyonce World Tour Dates</h1>
 <ol>
   <li>Generate an ordered list of opening bands as HTML</li>
